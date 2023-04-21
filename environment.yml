@@ -1,0 +1,9 @@
+name: DSA5204
+channels:
+  - pytorch
+dependencies:
+  - python=3.8
+  - pytorch=2.0.0
+  - torchvision
+  - numpy
+  - scikit-learn
