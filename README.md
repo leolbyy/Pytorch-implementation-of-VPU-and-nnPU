@@ -10,7 +10,7 @@ Pytorch implementation from NUS DSML DSA5204 Group 12 for
 2. conda activate DSA5204
 3. python run.py --dataset pageblocks --batch_size 200 --method vpu --gpu 0
 
-Available options:
+# Available options:
 * --dataset {fashionMNIST, pageblocks}
 * --batch_size
 * --method {vpu, nnpu, raw}
