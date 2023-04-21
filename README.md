@@ -14,7 +14,7 @@ Pytorch implementation from NUS DSML DSA5204 Group 12 for
 * --dataset {fashionMNIST, pageblocks}
 * --batch_size
 * --method {vpu, nnpu, raw}
-* --gpu (*Only valid when running on cuda available machines*)
+* --gpu (*Valid only when running on cuda available machines*)
 * --data_path
 
 [1]:https://arxiv.org/abs/1906.00642
