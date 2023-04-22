@@ -140,6 +140,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=500)
     parser.add_argument('--data_path', type=str, default=os.path.abspath(os.path.join(os.path.dirname(__file__), 'data')), help='path for storing raw dataset')
     parser.add_argument('--gpu', type=int, default=0, help='gpu id to run on. Only valid when running on cude available machines')
+    parser.add_argument('--prior', type=float, default=0.3, help='prior for nnpu method')
     config = vars(parser.parse_args())
 
     # global config:
@@ -159,7 +160,7 @@ if __name__ == '__main__':
         config['lam'] = 0.03
         config['loss_func'] = vpu()
     elif config['method'] == 'nnpu':
-        config['loss_func'] = nnPU(prior = 0.3)
+        config['loss_func'] = nnPU(prior = config['prior'])
     else:
         config['loss_func'] = raw()
 
