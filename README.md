@@ -16,6 +16,7 @@ Pytorch implementation from NUS DSML DSA5204 Group 12 for
 * --method {vpu, nnpu, raw}
 * --gpu (*Valid only when running on cuda available machines*)
 * --data_path
+* --prior (*Only used for nnPU method)
 
 [1]:https://arxiv.org/abs/1906.00642
 [2]:https://arxiv.org/abs/1703.00593
