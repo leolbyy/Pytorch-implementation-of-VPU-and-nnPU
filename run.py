@@ -10,7 +10,7 @@ from src.loss_functions import *
 def train(opt_phi, p_loader, x_loader):
     model.train()
     total_loss = 0
-    for _ in range(30):
+    for _ in range(config['val_iteration']):
         try:
             data_x, label_x = next(x_iter)
         except:
@@ -45,7 +45,7 @@ def train(opt_phi, p_loader, x_loader):
         loss.backward()
         opt_phi.step()
 
-    return total_loss/30
+    return total_loss / config['val_iteration']
 
 
 def evaluate(test_loader, epoch, train_loss, val_loss):
